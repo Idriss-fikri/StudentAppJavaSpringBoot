@@ -16,14 +16,16 @@ public class StudentModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id ;
+    @Column
     @NotNull
     private String firstName;
+    @Column
     @NotNull
     private String lastName ;
-
+    @Column
     @NotNull
     private int age ;
-
+    @Column
     @NotNull
     private  String PlaceBirth ;
 

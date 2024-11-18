@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Idriss FIKRI
+      changes:
+        - createTable:
+            tableName: student
+            columns:
+            - column:
+                name: id
+                type: BIGSERIAL
+                constraints:
+                  primaryKey: true
+            - column:
+                name: firstName
+                type: VARCHAR(255)
+
+            - column:
+                name: lastName
+                type: VARCHAR(255)
+
+            - column:
+                name: age
+                type: INTEGER
+
+
+            - column:
+                name: PlaceBirth
+                type: VARCHAR(255)
+
