@@ -11,22 +11,22 @@ import org.antlr.v4.runtime.misc.NotNull;
 @AllArgsConstructor
 @Entity
 @Builder
-@Table(name = "studentTable")
+@Table(name = "student")
 public class StudentModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id ;
-    @Column
+    @Column(name = "firstname")
     @NotNull
     private String firstName;
-    @Column
+    @Column(name = "lastname")
     @NotNull
     private String lastName ;
-    @Column
+    @Column(name = "age")
     @NotNull
     private int age ;
-    @Column
-    @NotNull
-    private  String PlaceBirth ;
+
+    @Column(name = "placebirth")
+    private String placeBirth;
 
 }
