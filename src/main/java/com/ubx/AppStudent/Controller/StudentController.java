@@ -21,9 +21,15 @@ public class StudentController {
         return ResponseEntity.ok(studentService.create(student)) ;
     }
 
-    @GetMapping("/getStudentId")
+    @GetMapping("/StudentId")
     @ResponseStatus(HttpStatus.FOUND)
     public ResponseEntity<?> getStudentById(@RequestParam(name = "id_student") Long id){
-        return ResponseEntity.ok(studentService.getStudentById(id));
+        return ResponseEntity.ok(this.studentService.getStudentById(id));
+    }
+
+    @GetMapping("/AllStudent")
+    @ResponseStatus(HttpStatus.FOUND)
+    public ResponseEntity<?> getAllStudents(){
+        return ResponseEntity.ok(this.studentService.getAllStudents());
     }
 }
